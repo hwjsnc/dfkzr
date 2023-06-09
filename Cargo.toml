@@ -1,0 +1,19 @@
+[package]
+name = "dfkzr"
+version = "0.1.0"
+description = "Dezimalfestkommazahlrechnung - decimal fixed point arithmetic with up to 19 digits"
+edition = "2021"
+keywords = ["fixed-point", "arithmetic"]
+categories = ["mathematics"]
+license = "LGPL-3.0-or-later"
+
+[profile.dev]
+opt-level = 1
+
+[features]
+default = []
+proptest = ["dep:proptest", "dep:proptest-derive"]
+
+[dependencies]
+proptest = { version = "1.1.0", optional = true }
+proptest-derive = { version = "0.3.0", optional = true }
